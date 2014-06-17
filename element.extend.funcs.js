@@ -28,3 +28,8 @@ Element.prototype.after = function(newElement) {
     parent.insertBefore(newElement, this.nextSibling);
   }
 };
+
+// Before
+Element.prototype.before = function(newElement) {
+  this.insertAdjacentHTML('beforebegin', newElement.outerHTML);
+};
