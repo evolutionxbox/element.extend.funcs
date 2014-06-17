@@ -17,3 +17,14 @@ Element.prototype.toggleClass = function(className) {
     this.className = classes.join(' ');
   }
 };
+
+// After
+Element.prototype.after = function(newElement) {
+  var parent = this.parentNode;
+
+  if(parent.lastchild == this) {
+    parent.appendChild(newElement);
+  } else {
+    parent.insertBefore(newElement, this.nextSibling);
+  }
+};
