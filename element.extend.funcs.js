@@ -42,3 +42,8 @@ Element.prototype.hasClass = function(className) {
     new RegExp('(^| )' + className + '( |$)', 'gi').test(this.className);
   }
 };
+
+// Prepend
+Element.prototype.prepend = function(newElement) {
+  this.parentNode.insertBefore(this, this.parentNode.firstChild);
+};
