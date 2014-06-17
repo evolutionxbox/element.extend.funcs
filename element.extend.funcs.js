@@ -33,3 +33,12 @@ Element.prototype.after = function(newElement) {
 Element.prototype.before = function(newElement) {
   this.insertAdjacentHTML('beforebegin', newElement.outerHTML);
 };
+
+// Has class
+Element.prototype.hasClass = function(className) {
+  if (this.classList) {
+    this.classList.contains(className);
+  } else {
+    new RegExp('(^| )' + className + '( |$)', 'gi').test(this.className);
+  }
+};
