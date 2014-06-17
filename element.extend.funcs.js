@@ -1,0 +1,1 @@
+// Funcations which extend the standard element object
